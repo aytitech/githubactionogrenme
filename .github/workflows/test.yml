@@ -30,6 +30,7 @@ jobs:
         echo $OSMAN 
   test2:
     runs-on: ubuntu-latest
+    needs: test
     steps:
      - name: ayrı jobdaki adim
        run: |
