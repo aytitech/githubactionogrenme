@@ -6,10 +6,14 @@ on:
     - main
   workflow_dispatch: 
 
+env:
+  DAY_OF_WEEK: Monday
+
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    env:
+      SELAMLAMA: Hello
     steps:
     - name: Checkout Adimi 
       uses: actions/checkout@v4
@@ -19,4 +23,16 @@ jobs:
         echo $OSMAN
       env:
        OSMAN : "Bu Osman Bizim Osman bunu adımda tanımladım"
-  
+    - name: Bu da bir baska adim
+      run: |
+        echo $DAY_OF_WEEK
+        echo $SELAMLAMA
+        echo $OSMAN 
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+     - name: ayrı jobdaki adim
+       run: |
+        echo $DAY_OF_WEEK
+        echo $SELAMLAMA
+        echo $OSMAN 
