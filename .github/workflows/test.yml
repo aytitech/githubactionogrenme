@@ -1,4 +1,4 @@
-name: ${{ github.repository_owner }} s Test Pipeline
+name: Test Pipeline
 
 on:
   push:
