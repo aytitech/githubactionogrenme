@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout Adimi 
-      uses: actions/check-out@v4
+      uses: actions/checkout@v4
     - name: Enviroment variable listeleme
       run:  printenv
   
