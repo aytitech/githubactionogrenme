@@ -25,3 +25,10 @@ jobs:
       with:
         name: output-log-file
         path: output.log
+  test2:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+    - name: Echo
+      run: echo output.log
+    
